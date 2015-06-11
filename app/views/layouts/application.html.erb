@@ -18,7 +18,14 @@
     <![endif]-->
   </head>
   <body>
-
+<header>Home
+  <nav>
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'Users', about_path %>
+    <%= link_to 'Links', blog_post_index_path %>
+    <%= link_to 'Login', new_blog_post_path %>
+  </nav>
+</header>
   <%= yield %>
 
 </body>

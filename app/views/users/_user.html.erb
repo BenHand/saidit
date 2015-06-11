@@ -1,0 +1,5 @@
+<div>
+  <span class="glyphicon glyphicon-user" aria-hidden="true"><%= link_to user.username, user_path(user) %></span>
+    <%= user.email %>
+  <span class="badge"><%= user.links.count %></span>
+</div>

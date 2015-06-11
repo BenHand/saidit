@@ -1,5 +1,5 @@
-<h1>Users#index</h1>
+<h2>All Users</h2>
 <p>Find me in app/views/users/index.html.erb</p>
-<% @users.each do |u| %>
-  <%= link_to u.username, "/users/#{params[:id]}" %>
+<% @users.each do |user| %>
+  <%= render partial: 'user', locals: { user: user } %>
 <% end %>
