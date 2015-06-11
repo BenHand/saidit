@@ -13,6 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'puma'
 gem 'rails_12factor'
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.4.1'
 
 group :test, :development do
   gem 'byebug'
