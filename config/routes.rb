@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'sessions/destroy'
+
+  get 'sessions/destroy', as: 'logout'
+  post 'sessions/create', as: 'login'
+  get 'sessions/create'
+
   resources :users
   resources :votes
   resources :links
   resources :comments
   resources :boards
 
-  root to: 'users#index'
+  root 'users#index'
 end

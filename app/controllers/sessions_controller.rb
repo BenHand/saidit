@@ -1,15 +1,16 @@
 class SessionsController < ApplicationController
+
   def new
   end
 
   def create
-    user = User.find_by_email(params[:id])
-    if user != nil && user.authenticate(params[:password_digest])
-      session[:user_id] = user.id
-      redirect_to root_url, notice: 'Success'
+    @users = User.find_by_email(params[:email])
+    if @users  && @users.authenticate(params[:password])
+      session[:user_id] = @users.id
+      redirect_to root_path, notice: 'Success'
     else
       flash[:alert] = 'Email or password did not match'
-      render :new
+      render text: "failure"
     end
   end
 
