@@ -21,9 +21,15 @@
 <header>Home
   <nav>
     <%= link_to 'Home', root_path %>
-    <%= link_to 'Users', about_path %>
-    <%= link_to 'Links', blog_post_index_path %>
-    <%= link_to 'Login', new_blog_post_path %>
+    <%= link_to 'Users', users_path %>
+    <%= link_to 'Links', links_path %>
+    <%=
+      if session[:user_id]
+        link_to 'Logout', sessions_destroy_path
+      else
+        link_to 'Login', new_user_path
+      end
+    %>
   </nav>
 </header>
   <%= yield %>

@@ -1,6 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-html{
-  background: black;
+.field{
+  text-align: center;
 };
+.actions{
+  padding-top: 10px;
+  text-align: center;
+};
+
+.login-box{
+  margin: 0 auto;
+  width: 180px;
+  padding: 10px;
+  border: 2px solid grey;
+};
+
