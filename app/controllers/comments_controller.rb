@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
     @comments = Comment.create(body: params[:comment][:body],
                             user_id: session[:user_id],
                             link_id: params[:comment][:link_id])
-    redirect_to link_path, notice: 'Comment Created'
+    redirect_to :back
   end
 
 private
