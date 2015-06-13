@@ -27,10 +27,13 @@ class UsersController < ApplicationController
     @users = User.find(params[:id]).links
   end
 
-  def edit
-    set_user
-    @users = User.find(params[:id])
-  end
+  # def edit
+  #   if set_user.id == session[:user_id]
+  #     render text: 'success'
+  #   else
+  #     render text: 'what now'
+  #   end
+  # end
 
   def destroy
   end

@@ -1,6 +1,29 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+header{
+  background: #532C63;
+  top: 0;
+  left: 0;
+  height: 50px;
+  a{
+    text-decoration: none;
+    color: #D0D9D5;
+  };
+};
+h1, h2, h3{
+  text-align: center;
+};
+
+nav{
+  height: 50px;
+  padding-top: 14px;
+};
+
+body{
+  background: #F2F2F2;
+};
 .field{
   text-align: center;
 };
@@ -17,6 +40,29 @@
 };
 
 .link-show{
-  margin: 0 auto;
+  margin: 0 20px 20px;
   padding: 20px;
+  background: #E8E0CF;
+  border-radius: 15px;
+  border: 3px solid #FBEDD7;
+};
+
+.session-link{
+  float: right;
+  margin-right: 10px;
+};
+
+.logo{
+  background: #D0D9D5;
+  color: #532C63;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  float: left;
+  font-size: 30px;
+}
+.login-field{
+  float: right;
+  margin-right: 10px;
+  color: #D0D9D5;
 };

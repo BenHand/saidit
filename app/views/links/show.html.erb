@@ -1,3 +1,25 @@
 <div class="link-show">
   <%= render partial: 'link', locals: { links: @links } %>
 </div>
+<section>
+  <div>
+    <%= "Comments(#{@links.comments.count})" %>
+    <% unless @links.comments.count == 0 %>
+      <% @comments.each do |comment| %>
+        <%= render partial: 'comment', locals: { comments: comment } %>
+      <% end %>
+    <% end %>
+  </div>
+  <div>
+    <%= form_for @comment do |f| %>
+      <div class="field">
+        <%= f.label :body %>
+        <%= f.text_area :body, rows: 8, cols: 100 %>
+        <%= f.hidden_field :link_id, value: @links.id %>
+      </div>
+      <div class="actions">
+        <%= f.submit 'Comment' %>
+      </div>
+    <% end %>
+  </div>
+</section>

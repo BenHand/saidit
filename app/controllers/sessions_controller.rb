@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to root_path, notice: 'Success'
     else
       flash[:alert] = 'Email or password did not match'
-      render text: "failure"
+      redirect_to new_user_path
     end
   end
 

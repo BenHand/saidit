@@ -1,5 +1,5 @@
-<h2>@users.username.titleize</h2>
-<h3>Profile Page</h3>
-<div><%= @users.links.count %></div>
-<div><%= @users.votes.count %></div>
-<div><%= @users.comments.count %></div><div><%= @users.email %></div>
+<h2><%= "#{@users.username.titleize}'s Profile" %></h2
+<div><%= @users.email %></div>
+<div>Total Links: <%= @users.links.count %></div>
+<div>Total Votes Cast: <%= @users.votes.count %></div>
+<div>Total Comments Made: <%= @users.comments.count %></div>

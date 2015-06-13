@@ -2,6 +2,4 @@
 <%= link_to links.title.titleize, link_path(links.id) %>
 </div>
 <div><%= links.post %></div>
-<div>
-<%= Vote.find(links.id).number %>
-</div>
+--<%= link_to User.find(links.user_id).username.titleize, user_path(links.user_id) %>
