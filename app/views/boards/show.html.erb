@@ -1,4 +1,5 @@
 <h2><%= @board.category.titleize %></h2>
 <% @links.each do |link| %>
-    <%= render partial: 'links/link', locals: { links: link } %>
+  <%= render partial: 'links/link', locals: { links: link } %>
 <% end %>
+<%= button_to 'Create New Link', '/links/new', method: :get %>
