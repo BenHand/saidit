@@ -1,17 +1,20 @@
 <h2> <%= @current_user.username.titleize %> - Create a new link</h2>
-<%= form_for @links do |f| %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :post %>
-    <%= f.text_field :post %>
-  </div>
-  <div class="field">
-    <%= f.select :board, Board.all.map { |x| [x.category, x.id] } %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'POST' %>
-  </div>
-<% end %>
+<div class="link-area">
+  <%= form_for @links do |f| %>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder: 'Whats up?', class: 'field-area'  %>
+    </div>
+    <div class="field">
+      <%= f.text_area :post, cols: 80, rows: 6,
+           placeholder: 'Please explain further', class: 'field-area' %>
+    </div>
+    <div class="field">
+      <%= f.label :category %>
+      <%= f.select :board, Board.all.map { |x| [x.category, x.id] } %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'POST' %>
+    </div>
+  <% end %>
+</section>

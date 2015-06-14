@@ -8,7 +8,9 @@ class LinksController < ApplicationController
     @links = Link.find(params[:id])
     @comments = Comment.all.where(link_id: params[:id])
     @comment = Comment.new
-    @votes = Link.find(params[:id]).votes
+    if Link.find(params[:id]).votes
+      @votes = Link.find(params[:id]).votes
+    end
   end
 
   def new

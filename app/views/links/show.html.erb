@@ -1,12 +1,18 @@
-<div class="upvote-box">
-  <%= button_to @votes[0].upvote, upvote_path(link_id: @links.id), class: 'upvote' %>
-</div>
-<div class="link-show">
-  <%= render partial: 'link', locals: { links: @links } %>
-</div>
-<div class="downvote-box">
-  <%= button_to @votes[0].downvote, downvote_path(link_id: @links.id), class: 'downvote' %>
-</div>
+<section class= "link-box">
+  <div class="upvote-box"> UP
+    <% if @votes != nil %>
+      <%= button_to @votes[0].upvote, upvote_path(link_id: @links.id) %>
+    <% end %>
+  </div>
+  <div class="link-show">
+    <%= render partial: 'link', locals: { links: @links } %>
+  </div>
+  <div class="downvote-box"> DOWN
+    <% if @votes != nil %>
+      <%= button_to @votes[0].downvote, downvote_path(link_id: @links.id) %>
+    <% end %>
+  </div>
+  </section>
 <section>
   <div>
     <%= "Comments(#{@links.comments.count})" %>
