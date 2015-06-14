@@ -9,6 +9,10 @@ class BoardsController < ApplicationController
     @board = Board.new
   end
 
+  def create
+    Board.create(category: params['/boards/new'][:category])
+    redirect_to :back
+  end
   # TODO: be able to show all links from specific category
   # def show
   #   @boards = Board.find_by_category(category: params[:id])
