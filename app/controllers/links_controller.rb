@@ -8,9 +8,8 @@ class LinksController < ApplicationController
     @links = Link.find(params[:id])
     @comments = Comment.all.where(link_id: params[:id])
     @comment = Comment.new
-    if Link.find(params[:id]).votes
-      @votes = Link.find(params[:id]).votes
-    end
+    @votes = Link.find(params[:id]).votes
+
   end
 
   def new
@@ -20,6 +19,7 @@ class LinksController < ApplicationController
   def create
     @links = Link.create(title: params[:link][:title], post: params[:link][:post],
                          board_id: params[:link][:board], user_id: session[:user_id] )
+    Vote.create(link_id: @links.id)
     redirect_to link_path(@links), notice: 'Post Created'
   end
 

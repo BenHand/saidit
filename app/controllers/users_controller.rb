@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    users = User.all
+    @counter = 1
+    @users = users.sort_by { |u| u.links.count }.reverse
   end
 
   def show

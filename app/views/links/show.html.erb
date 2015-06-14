@@ -1,20 +1,16 @@
 <section class= "link-box">
   <div class="upvote-box"> UP
-    <% if @votes != nil %>
-      <%= button_to @votes[0].upvote, upvote_path(link_id: @links.id) %>
-    <% end %>
+    <%= button_to @votes[0].upvote, upvote_path(link_id: @links.id) %>
   </div>
   <div class="link-show">
     <%= render partial: 'link', locals: { links: @links } %>
   </div>
   <div class="downvote-box"> DOWN
-    <% if @votes != nil %>
-      <%= button_to @votes[0].downvote, downvote_path(link_id: @links.id) %>
-    <% end %>
+    <%= button_to @votes[0].downvote, downvote_path(link_id: @links.id) %>
   </div>
   </section>
 <section>
-  <div>
+  <div class="comments">
     <%= "Comments(#{@links.comments.count})" %>
     <% unless @links.comments.count == 0 %>
       <% @comments.each do |comment| %>
@@ -25,8 +21,7 @@
   <div>
     <%= form_for @comment do |f| %>
       <div class="field">
-        <%= f.label :body %>
-        <%= f.text_area :body, rows: 6, cols: 100 %>
+        <%= f.text_area :body, rows: 4, cols: 80, placeholder: 'Put your comment here, yo' %>
         <%= f.hidden_field :link_id, value: @links.id %>
       </div>
       <div class="actions">

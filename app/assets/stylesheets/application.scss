@@ -47,7 +47,7 @@ body{
 };
 
 .link-show{
-  margin: 0 auto;
+  margin: 0 auto 10px;
   padding: 20px;
   max-width: 75%;
   background: #E8E0CF;
@@ -108,4 +108,40 @@ body{
 };
 .link-area{
   margin-top: 50px;
-}
+};
+.comments{
+  margin-left: 20%;
+  background: #FBEDD7;
+  max-width: 60%;
+  border-radius: 10px;
+  padding: 5px;
+  color: #532C63;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border: 2px solid #E8E0CF;
+};
+.comment-box{
+  background: #F2F2F2;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #E8E0CF;
+};
+.links-votes{
+  text-align: center;
+};
+.user-index-box{
+  margin-bottom: 5px;
+  margin-left: 2%;
+  background: #D0D9D5;
+  width: 30%;
+  line-height: 30px;
+  border-radius: 8px;
+  border: 2px solid #E8E0CF;
+  float: left;
+
+};
+
+.user-index-info{
+  padding: 5px;
+};
