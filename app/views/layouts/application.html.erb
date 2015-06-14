@@ -16,6 +16,7 @@
       <nav>
         <%= link_to 'Users', users_path %>
         <%= link_to 'Links', links_path %>
+        <%= link_to 'Boards', boards_path %>
         <% if session[:user_id] %>
           <%=  link_to 'New Link', new_link_path %>
           <%=  link_to 'Logout', logout_path, class: 'session-link' %>

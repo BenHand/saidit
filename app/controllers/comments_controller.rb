@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
 
   def index
-
   end
 
   def new
@@ -12,9 +11,11 @@ class CommentsController < ApplicationController
     @comments = Comment.find(params[:id])
   end
 
+  # TODO: be able to edit comments if authorized
   def edit
   end
 
+  # TODO: be able to delete comments if authorized
   def destroy
   end
 
@@ -29,7 +30,7 @@ private
 
   def comment_params
     params.require(:comment).permit(:body, :user_id,
-                                 :link_id)
+                                    :link_id)
   end
 
 end

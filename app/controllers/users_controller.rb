@@ -8,6 +8,8 @@ class UsersController < ApplicationController
 
   def show
     @users = User.find(params[:id])
+    @links = Link.all.where(user_id: params[:id])
+    @comments = Comment.all.where(user_id: params[:id])
   end
 
   def new
@@ -28,7 +30,7 @@ class UsersController < ApplicationController
   def show_links
     @users = User.find(params[:id]).links
   end
-
+  # TODO: be able to edit users information if authorized
   # def edit
   #   if set_user.id == session[:user_id]
   #     render text: 'success'
@@ -37,6 +39,7 @@ class UsersController < ApplicationController
   #   end
   # end
 
+  # TODO: be able to delete a user account if authorized
   def destroy
   end
 

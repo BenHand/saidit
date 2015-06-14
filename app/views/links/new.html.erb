@@ -11,7 +11,7 @@
     </div>
     <div class="field">
       <%= f.label :category %>
-      <%= f.select :board, Board.all.map { |x| [x.category, x.id] } %>
+      <%= f.select :board, @all_boards %>
     </div>
     <div class="actions">
       <%= f.submit 'POST' %>

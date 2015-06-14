@@ -15,6 +15,7 @@ class LinksController < ApplicationController
 
   def new
     @links = Link.new
+    @all_boards = Board.select_boards
   end
 
   def create

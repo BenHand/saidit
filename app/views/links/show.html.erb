@@ -1,8 +1,9 @@
-<section class= "link-box">
+<h3><%= @links.title.titleize %></h3>
+<section>
   <div class="upvote-box"> UP
     <%= button_to @votes[0].upvote, upvote_path(link_id: @links.id) %>
   </div>
-  <div class="link-show">
+  <div>
     <%= render partial: 'link', locals: { links: @links } %>
   </div>
   <div class="downvote-box"> DOWN
@@ -10,8 +11,8 @@
   </div>
   </section>
 <section>
-  <div class="comments">
-    <%= "Comments(#{@links.comments.count})" %>
+  <div>
+    <h4><%= "Comments(#{@links.comments.count})" %></h4>
     <% unless @links.comments.count == 0 %>
       <% @comments.each do |comment| %>
         <%= render partial: 'comment', locals: { comments: comment } %>

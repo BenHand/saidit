@@ -14,7 +14,7 @@ header{
     margin-left: 30px;
   };
 };
-h1, h2, h3{
+h1, h2, h3, h4{
   text-align: center;
 };
 
@@ -118,14 +118,15 @@ body{
   color: #532C63;
   font-weight: bold;
   margin-bottom: 15px;
-  border: 2px solid #E8E0CF;
+  border: 3px solid #E8E0CF;
 };
 .comment-box{
-  background: #F2F2F2;
-  margin: 10px;
+  background: #FBEDD7;
+  margin: 10px auto;
   padding: 5px;
+  max-width: 55%;
   border-radius: 10px;
-  border: 2px solid #E8E0CF;
+  border: 3px solid #E8E0CF;
 };
 .links-votes{
   text-align: center;
@@ -139,9 +140,24 @@ body{
   border-radius: 8px;
   border: 3px solid #532C63;
   float: left;
-
 };
 
+.user-profile{
+  background: #E8E0CF;
+  // border-radius: 10px 5% / 20px 25em 30px 35em;
+  border-radius: 15px 15%;
+  margin: 60px auto 20px;
+  width: 30%;
+  border: 3px solid black;
+};
+
+.user-profile-contents{
+  margin: 10px;
+  padding: 10px 5px 0px;
+  background: white;
+  border-radius: 15px 15%;
+  border: 2px solid #E8E0CF;
+};
 .user-index-info{
   padding: 5px;
 };
@@ -149,4 +165,25 @@ body{
   margin-left: 220px;
   background: #FBEDD7;
   color: #532C63;
+};
+.board-index{
+  max-width: 60%;
+  margin: 0 auto;
+  background: #D0D9D5;
+  border: 2px solid #532C63;
+  padding: 15px;
+  overflow: hidden;
+};
+.boards{
+  background: #E8E0CF;
+  margin: 0 15px 10px;
+  width: 150px;
+  float: left;
+  text-align: center;
+  border: 2px solid #532C63;
+};
+
+.new-board{
+  margin: 20px auto;
+  width: 30%;
 };

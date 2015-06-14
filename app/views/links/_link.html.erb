@@ -1,14 +1,16 @@
-<div>
-  <%= link_to links.title.titleize, link_path(links.id) %>
-</div>
-<div><%= links.post %></div>
-  --<%= link_to User.find(links.user_id).username.titleize, user_path(links.user_id) %>
-<div class="links-votes">
-  <% if Vote.find_by(link_id: links.id) != nil %>
-    <%= Vote.find_by(link_id: links.id).upvote %> Up |
-    <%= Vote.find_by(link_id: links.id).downvote %> Down
-  <% else %>
-    0 Up |
-    0 Down
-  <% end %>
+<div class="link-show">
+  <div>
+    <%= link_to links.title.titleize, link_path(links.id) %>
+  </div>
+  <div><%= links.post %></div>
+    --<%= link_to User.find(links.user_id).username.titleize, user_path(links.user_id) %>
+  <div class="links-votes">
+    <% if Vote.find_by(link_id: links.id) != nil %>
+      <%= Vote.find_by(link_id: links.id).upvote %> Up |
+      <%= Vote.find_by(link_id: links.id).downvote %> Down
+    <% else %>
+      0 Up |
+      0 Down
+    <% end %>
+  </div>
 </div>

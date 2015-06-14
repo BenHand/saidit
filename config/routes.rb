@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'sessions/create'
   post 'votes/upvote', as: 'upvote'
   post 'votes/downvote', as: 'downvote'
+
   resources :users
   resources :votes
   resources :links

@@ -1,5 +1,21 @@
-<h2><%= "#{@users.username.titleize}'s Profile" %></h2
-<div><%= @users.email %></div>
-<div>Total Links: <%= @users.links.count %></div>
-<div>Total Votes Cast: <%= @users.votes.count %></div>
-<div>Total Comments Made: <%= @users.comments.count %></div>
+<h2><%= "#{@users.username.titleize}'s Profile" %></h2>
+<section>
+  <div class="user-profile">
+    <div class="user-profile-contents">
+      <p><%= mail_to @users.email %></p>
+      <p>Total Links: <%= @users.links.count %></p>
+      <p>Votes Cast: <%= @users.votes.count %></p>
+      <p>Comments Made: <%= @users.comments.count %></p>
+    </div>
+  </div>
+</section>
+<section>
+  <h3>Links</h3>
+    <% @links.each do |link| %>
+      <%= render partial: 'links/link', locals: { links: link } %>
+    <% end %>
+  <h4>Comments</h4>
+    <% @comments.each do |comment| %>
+      <%= render partial: 'links/comment', locals: { comments: comment } %>
+    <% end %>
+</section>
