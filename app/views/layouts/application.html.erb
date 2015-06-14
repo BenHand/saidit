@@ -27,9 +27,9 @@
         <div class="login-field">
         <% unless session[:user_id] %>
           <%= form_tag sessions_create_path do %>
-            Email: <%= text_field_tag :email %>
+               Email: <%= text_field_tag :email %>
             Password: <%= password_field_tag :password %>
-            <%= submit_tag "Submit" %>
+                      <%= submit_tag "Submit" %>
           <% end %>
         <% end %>
         </div>

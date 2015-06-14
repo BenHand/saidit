@@ -4,7 +4,6 @@
 <div><%= links.post %></div>
   --<%= link_to User.find(links.user_id).username.titleize, user_path(links.user_id) %>
 <div class="links-votes">
-  <strong>Votes:</strong>
   <% if Vote.find_by(link_id: links.id) != nil %>
     <%= Vote.find_by(link_id: links.id).upvote %> Up |
     <%= Vote.find_by(link_id: links.id).downvote %> Down

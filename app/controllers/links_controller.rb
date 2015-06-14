@@ -1,7 +1,8 @@
 class LinksController < ApplicationController
 
   def index
-    @links = Link.all.reverse
+    links = Link.all.reverse
+    @links = links.sort_by { |l| l.votes.sort_by { |v| v.upvote } }.reverse
   end
 
   def show
