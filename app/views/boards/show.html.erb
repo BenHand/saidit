@@ -1,2 +1,4 @@
-<h1>Boards#show</h1>
-<p>Find me in app/views/boards/show.html.erb</p>
+<h2><%= @board.category.titleize %></h2>
+<% @links.each do |link| %>
+    <%= render partial: 'links/link', locals: { links: link } %>
+<% end %>

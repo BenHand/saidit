@@ -4,7 +4,11 @@ class BoardsController < ApplicationController
     @boards = Board.all
   end
 
-  # TODO: be able to create a new category
+  def show
+    @board = Board.find(params[:id])
+    @links = Link.all.where(board_id: params[:id])
+  end
+
   def new
     @board = Board.new
   end
