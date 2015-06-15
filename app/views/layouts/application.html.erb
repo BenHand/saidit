@@ -26,17 +26,18 @@
           <%= link_to 'Sign-Up', new_user_path %>
         <% end %>
         <div class="login-field">
-        <% unless session[:user_id] %>
-          <%= form_tag sessions_create_path do %>
-               Email: <%= text_field_tag :email %>
-            Password: <%= password_field_tag :password %>
-                      <%= submit_tag "Submit" %>
+          <% unless session[:user_id] %>
+            <div class="login-tag">
+              <%= form_tag sessions_create_path do %>
+                   Email: <%= text_field_tag :email %>
+                Password: <%= password_field_tag :password %>
+                          <%= submit_tag "Submit", class: 'login-btn' %>
+              <% end %>
+            </div>
           <% end %>
-        <% end %>
         </div>
       </nav>
     </header>
   <%= yield %>
-  <footer><%= params.inspect %></footer>
   </body>
 </html>

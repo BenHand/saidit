@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post 'votes/downvote', as: 'downvote'
 
   delete 'boards/:id', to: 'boards#destroy', as: 'delete_board'
+
   resources :users
   resources :votes
   resources :links

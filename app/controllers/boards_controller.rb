@@ -17,11 +17,8 @@ class BoardsController < ApplicationController
     Board.create(category: params['/boards/new'][:category])
     redirect_to :back
   end
-  # TODO: be able to show all links from specific category
-  # def show
-  #   @boards = Board.find_by_category(category: params[:id])
-  # end
 
+  # TODO: be able to edit board category names if authorized
   # def edit
   # end
 

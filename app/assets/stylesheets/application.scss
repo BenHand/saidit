@@ -1,16 +1,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+$color-pallet-1: #532C63; // dark purple, border/text/header          - Bossanova
+$color-pallet-2: #D0D9D5; // darkish grey, content boxes              - Zumthor
+$color-pallet-3: #F2F2F2; // greyish purple, (main background)        - Concrete
+$color-pallet-4: #E8E0CF; // darker off-white, content boxes, borders - Bleach White
+$color-pallet-5: #FBEDD7; // off-white, content boxes, borders        - Antique White
 
 header{
-  background: #532C63;
+  background: $color-pallet-1;
   top: 0;
   left: 0;
-  height: 50px;
+  height: 70px;
 
   a{
     text-decoration: none;
-    color: #D0D9D5;
+    color: $color-pallet-2;
     margin-left: 30px;
   };
 };
@@ -24,13 +28,13 @@ nav{
 };
 
 body{
-  background: #F2F2F2;
+  background: $color-pallet-3;
 };
 .field{
   text-align: center;
 };
 .field-area{
-  border: 3px solid #532C63;
+  border: 3px solid $color-pallet-1;
   border-radius: 10px;
   margin-bottom: 20px;
 };
@@ -50,9 +54,9 @@ body{
   margin: 0 auto 10px;
   padding: 20px;
   max-width: 75%;
-  background: #E8E0CF;
+  background: $color-pallet-4;
   border-radius: 15px;
-  border: 3px solid #FBEDD7;
+  border: 3px solid $color-pallet-5;
 };
 
 .session-link{
@@ -61,8 +65,8 @@ body{
 };
 
 .logo{
-  background: #D0D9D5;
-  color: #532C63;
+  background: $color-pallet-2;
+  color: $color-pallet-1;
   width: 120px;
   height: 50px;
   text-align: center;
@@ -70,18 +74,30 @@ body{
   font-size: 30px;
 }
 .login-field{
-  float: right;
+  border: 2px solid $color-pallet-5;
+  border-radius: 15px;
   margin-right: 10px;
-  color: #D0D9D5;
+  background: $color-pallet-4;
+  color: black;
+  position: absolute;
+  top: 16px;
+  right: 0;
+  z-index: 1000px;
+};
+.login-btn{
+  color: black;
+};
+.login-tag{
+  margin: 13px 10px 0;
 };
 
 .comments{};
 .upvote{
-  background: #532C63;
+  background: $color-pallet-1;
   width: 35px;
   height: 35px;
   border-radius: 10px;
-  border: 2px solid #D0D9D5;
+  border: 2px solid $color-pallet-2;
   text-align: center;
   color: white;
   font-size: 18px;
@@ -93,11 +109,11 @@ body{
   margin-left: 80px;
 };
 .downvote{
-  background: #532C63;
+  background: $color-pallet-1;
   width: 35px;
   height: 35px;
   border-radius: 10px;
-  border: 2px solid #D0D9D5;
+  border: 2px solid $color-pallet-2;
   text-align: center;
   color: white;
   font-size: 18px;
@@ -107,26 +123,31 @@ body{
   margin-top: 50px;
 };
 .link-area{
-  margin-top: 50px;
+  margin: 50px auto;
+  padding: 40px 0;
+  max-width: 60%;
+  background: $color-pallet-2;
+  border: 3px solid $color-pallet-1;
+  border-radius: 15px;
 };
 .comments{
   margin-left: 20%;
-  background: #FBEDD7;
+  background: $color-pallet-5;
   max-width: 60%;
   border-radius: 10px;
   padding: 5px;
-  color: #532C63;
+  color: $color-pallet-1;
   font-weight: bold;
   margin-bottom: 15px;
-  border: 3px solid #E8E0CF;
+  border: 3px solid $color-pallet-4;
 };
 .comment-box{
-  background: #FBEDD7;
+  background: $color-pallet-5;
   margin: 10px auto;
   padding: 5px;
   max-width: 55%;
   border-radius: 10px;
-  border: 3px solid #E8E0CF;
+  border: 3px solid $color-pallet-4;
 };
 .links-votes{
   text-align: center;
@@ -134,17 +155,16 @@ body{
 .user-index-box{
   margin-bottom: 5px;
   margin-left: 2%;
-  background: #D0D9D5;
+  background: $color-pallet-2;
   width: 30%;
   line-height: 30px;
   border-radius: 8px;
-  border: 3px solid #532C63;
+  border: 3px solid $color-pallet-1;
   float: left;
 };
 
 .user-profile{
-  background: #E8E0CF;
-  // border-radius: 10px 5% / 20px 25em 30px 35em;
+  background: $color-pallet-4;
   border-radius: 15px 15%;
   margin: 60px auto 20px;
   width: 30%;
@@ -156,31 +176,31 @@ body{
   padding: 10px 5px 0px;
   background: white;
   border-radius: 15px 15%;
-  border: 2px solid #E8E0CF;
+  border: 2px solid $color-pallet-4;
 };
 .user-index-info{
   padding: 5px;
 };
 .badge{
   margin-left: 220px;
-  background: #FBEDD7;
-  color: #532C63;
+  background: $color-pallet-5;
+  color: $color-pallet-1;
 };
 .board-index{
   max-width: 60%;
   margin: 0 auto;
-  background: #D0D9D5;
-  border: 2px solid #532C63;
+  background: $color-pallet-2;
+  border: 2px solid $color-pallet-1;
   padding: 15px;
   overflow: hidden;
 };
 .boards{
-  background: #E8E0CF;
+  background: $color-pallet-4;
   margin: 0 15px 10px;
   width: 150px;
   float: left;
   text-align: center;
-  border: 2px solid #532C63;
+  border: 2px solid $color-pallet-1;
 };
 
 .new-board{
