@@ -1,1 +1,16 @@
-<h1>Coming Soon: Edit your links</h1>
+<h2>Coming Soon: Edit your links</h2>
+<div class="link-area">
+  <%= form_for @link do |f| %>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'field-area' %>
+    </div>
+    <div class="field">
+      <%= f.label :post %>
+      <%= f.text_area :post, cols: 80, rows: 6, class: 'field-area' %>
+    </div>
+    <div class="actions">
+      <%= f.submit "SAVE" %>
+    </div>
+  <% end %>
+</div>

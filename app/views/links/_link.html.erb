@@ -13,4 +13,9 @@
       0 Down
     <% end %>
   </div>
+  <div class="edit-btn">
+    <% if session[:user_id] == links.user_id %>
+      <%= link_to 'EDIT', edit_link_path(links.id) %>
+    <% end %>
+  </div>
 </div>

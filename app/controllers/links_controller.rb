@@ -27,6 +27,15 @@ class LinksController < ApplicationController
 
 # TODO: be able to edit links
   def edit
+    @link = Link.find(params[:id])
+  end
+
+  def update
+    link = Link.find(params[:id])
+    link.title = params[:link][:title]
+    link.post = params[:link][:post]
+    link.save
+    redirect_to link_path(link.id)
   end
 
 # TODO: be able to delete links
