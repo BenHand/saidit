@@ -1,3 +1,5 @@
+require 'faker'
+
 20.times do
 
 board = Board.create(category: Faker::Lorem.word)
