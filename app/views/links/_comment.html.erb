@@ -1,8 +1,13 @@
 <div class="comment-box">
-  <strong>
-    <%= comments.user.username %> -
-  </strong>
-  <%= comments.body %>
-  <br>
-  <%= comments.created_at.to_formatted_s(:long) %>
+  <div class="row">
+    <div class="col-md-5">
+      <strong><%= comments.user.username %>-</strong>
+      <%= comments.body %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 user-cmt">
+      <%= comments.created_at.to_formatted_s(:long) %>
+    </div>
+  </div>
 </div>

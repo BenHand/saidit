@@ -16,8 +16,10 @@
         <%= render partial: 'links/link', locals: { links: link } %>
       <% end %>
     </div>
-  <h4>Comments</h4>
+  <h4 class="row">Comments</h4>
+  <div class="container">
     <% @comments.each do |comment| %>
       <%= render partial: 'links/comment', locals: { comments: comment } %>
     <% end %>
+  </div>
 </section>

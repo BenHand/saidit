@@ -1,6 +1,6 @@
-<h1>All Links</h1>
+<h1 class="row">All Links</h1>
 <% @links.each do |link| %>
-  <div>
+  <div class="container-fluid">
     <%= render partial: 'link', locals: { links: link } %>
   </div>
 <% end %>

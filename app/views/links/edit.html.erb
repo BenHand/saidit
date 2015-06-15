@@ -1,16 +1,24 @@
-<h2>Coming Soon: Edit your links</h2>
-<div class="link-area">
-  <%= form_for @link do |f| %>
-    <div class="field">
-      <%= f.label :title %>
-      <%= f.text_field :title, class: 'field-area' %>
-    </div>
-    <div class="field">
-      <%= f.label :post %>
-      <%= f.text_area :post, cols: 80, rows: 6, class: 'field-area' %>
-    </div>
-    <div class="actions">
-      <%= f.submit "SAVE" %>
-    </div>
-  <% end %>
+<h2 class="row"><%= "Edit your link, #{current_user.username.titleize}" %></h2>
+<div class="container-fluid">
+  <div class="link-area">
+    <div class="row">
+      <%= form_for @link do |f| %>
+        <div class="field col-md-12">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: 'text-field' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field col-md-12">
+          <%= f.text_area :post, class: 'text-area' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="actions col-md-12">
+          <%= f.submit "SAVE", class: 'submit-btn' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
+

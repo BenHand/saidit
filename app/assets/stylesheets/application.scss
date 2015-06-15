@@ -40,11 +40,21 @@ body{ background: $color-pallet-3; };
 
 .field{ text-align: center; };
 
-.field-area{
+.text-field{
   border: 3px solid $color-pallet-1;
-  border-radius: 10px;
+  width: 40%;
   margin-bottom: 20px;
+  &:focus{outline: 3px solid lighten($color-pallet-1, 20%);};
 };
+
+.text-area{
+  border: 3px solid $color-pallet-1;
+  width: 80%;
+  height: 40%;
+  margin-bottom: 20px;
+  &:focus{outline: 3px solid lighten($color-pallet-1, 20%);};
+};
+
 .actions{
   padding-top: 10px;
   text-align: center;
@@ -160,13 +170,10 @@ body{ background: $color-pallet-3; };
 
 .user-index-box{
   margin-bottom: 5px;
-  // margin-left: 2%;
   background: $color-pallet-2;
-  // width: 30%;
   line-height: 30px;
   border-radius: 8px;
   border: 3px solid $color-pallet-1;
-  // float: left;
 };
 
 .user-profile{
@@ -242,10 +249,27 @@ body{ background: $color-pallet-3; };
     color: red;
   }
 };
+
 section.row{
   margin-left: 0px;
   margin-right: 0px;
 };
+
 .email{
   margin-left: 12px;
 ;}
+
+.user-cmt{
+  float: right;
+  margin-right: 0px;
+};
+
+.submit-btn{
+  border: 2px solid $color-pallet-1;
+  background: #E8E0CF;
+  &:hover{
+    border-radius: 50px;
+    background: $color-pallet-1;
+    color: white;
+  };
+};
