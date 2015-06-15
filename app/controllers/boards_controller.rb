@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
 
   def index
-    @boards = Board.all
+    @boards = Board.all.sort_by { |board| board.links.count }.reverse
   end
 
   def show
