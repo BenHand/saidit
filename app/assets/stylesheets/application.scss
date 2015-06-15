@@ -6,6 +6,12 @@ $color-pallet-3: #F2F2F2; // greyish purple, (main background)        - Concrete
 $color-pallet-4: #E8E0CF; // darker off-white, content boxes, borders - Bleach White
 $color-pallet-5: #FBEDD7; // off-white, content boxes, borders        - Antique White
 
+
+a:hover{
+    color: $color-pallet-1;
+    font-weight: bold;
+};
+
 header{
   background: $color-pallet-1;
   top: 0;
@@ -16,6 +22,10 @@ header{
     text-decoration: none;
     color: $color-pallet-2;
     margin-left: 30px;
+    &:hover{
+      color: $color-pallet-3;
+      text-decoration: none;
+    };
   };
 };
 
@@ -178,9 +188,9 @@ body{ background: $color-pallet-3; };
 .user-index-info{ padding: 5px; };
 
 .badge{
-  margin-left: 220px;
   background: $color-pallet-5;
   color: $color-pallet-1;
+  float: right;
 };
 
 .board-index{
@@ -236,3 +246,6 @@ section.row{
   margin-left: 0px;
   margin-right: 0px;
 };
+.email{
+  margin-left: 12px;
+;}

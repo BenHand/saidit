@@ -1,5 +1,5 @@
-<h2><%= "#{@users.username.titleize}'s Profile" %></h2>
-<section>
+<h2 class="row"><%= "#{@users.username.titleize}'s Profile" %></h2>
+<section class="container-fluid">
   <div class="user-profile">
     <div class="user-profile-contents">
       <p><%= mail_to @users.email %></p>
@@ -9,11 +9,13 @@
     </div>
   </div>
 </section>
-<section>
-  <h3>Links</h3>
-    <% @links.each do |link| %>
-      <%= render partial: 'links/link', locals: { links: link } %>
-    <% end %>
+<section class='container-fluid'>
+  <h3 class="row">Links</h3>
+    <div class="row">
+      <% @links.each do |link| %>
+        <%= render partial: 'links/link', locals: { links: link } %>
+      <% end %>
+    </div>
   <h4>Comments</h4>
     <% @comments.each do |comment| %>
       <%= render partial: 'links/comment', locals: { comments: comment } %>
