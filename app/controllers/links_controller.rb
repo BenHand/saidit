@@ -28,6 +28,7 @@ class LinksController < ApplicationController
 # TODO: be able to edit links
   def edit
   end
+
 # TODO: be able to delete links
   def destroy
   end
