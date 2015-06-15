@@ -1,4 +1,4 @@
-g20.times do
+20.times do
 
 board = Board.create(category: Faker::Lorem.word)
 
