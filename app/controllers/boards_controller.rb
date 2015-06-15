@@ -25,7 +25,19 @@ class BoardsController < ApplicationController
   # def edit
   # end
 
-  # def destroy
-  # end
+  def destroy
+    links = Link.all.where(board_id: params[:id])
+    links.each do |link|
+      link.comments.each do |comment|
+        comment.votes.each do |vote|
+          vote.destroy
+        end
+        comment.destroy
+      end
+      link.destroy
+    end
+    Board.find(params[:id]).destroy
+    redirect_to :back
+  end
 
 end
