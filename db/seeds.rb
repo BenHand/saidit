@@ -2,9 +2,10 @@
 
 board = Board.create(category: Faker::Lorem.word)
 
-
+password = Faker::Internet.password
 user = User.create(username: Faker::Internet.user_name,
-            password_digest: Faker::Internet.password,
+                   password: password,
+      password_confirmation: password,
                       email: Faker::Internet.safe_email)
 
 
