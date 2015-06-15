@@ -43,6 +43,10 @@ class UsersController < ApplicationController
   def destroy
   end
 
+  def welcome
+    render 'welcome.html.erb'
+  end
+
 private
 
   def set_user

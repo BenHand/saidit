@@ -215,3 +215,13 @@ body{
   float: right;
   font-weight: bold;
 };
+
+.welcome{
+  background: $color-pallet-2;
+  width: 60%;
+  height: 40%;
+  padding: 50px;
+  margin: 60px auto;
+  border: 3px solid $color-pallet-1;
+  border-radius: 20px;
+};

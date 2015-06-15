@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get '/welcome', to: 'users#welcome'
   get 'sessions/destroy', as: 'logout'
   post 'sessions/create', as: 'login'
   get 'sessions/create'
@@ -15,5 +16,5 @@ Rails.application.routes.draw do
   resources :comments
   resources :boards
 
-  root 'users#index'
+  root 'users#welcome'
 end
