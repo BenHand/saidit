@@ -13,6 +13,9 @@
 * `rake db:seed` to populate your db with 50 randomly generated todos(via <a href="https://rubygems.org/gems/faker/versions/1.4.3">faker</a>).
 * `rails s` to start your local server.
 
+
+## UML and planning stage pic in app/assets/images
+
 ## File Structure
 ```
 .
