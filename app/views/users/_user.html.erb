@@ -1,13 +1,15 @@
-<div class="user-index-box">
-  <div class="user-index-info">
-    <span class="glyphicon glyphicon-user" aria-hidden="true">
-      <%= link_to user.username.titleize, user_path(user) %>
-    </span>
-    <div>
-      <%= mail_to user.email %>
+<div class="col-md-4">
+  <div class="user-index-box">
+    <div class="user-index-info">
+      <span class="glyphicon glyphicon-user" aria-hidden="true">
+        <%= link_to user.username.titleize, user_path(user) %>
+      </span>
+      <div>
+        <%= mail_to user.email %>
+      </div>
+      <span class="badge"><%= user.links.count %> Link(s) Posted
+      <%= "| # #{@counter}" %></span>
+      <% @counter += 1 %>
     </div>
-    <span class="badge"><%= user.links.count %> Link(s) Posted
-    <%= "| # #{@counter}" %></span>
-    <% @counter += 1 %>
   </div>
 </div>

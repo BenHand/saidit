@@ -1,4 +1,6 @@
-<h2>All Users</h2>
-<% @users.each do |user| %>
-  <%= render partial: 'user', locals: { user: user } %>
-<% end %>
+<h2 class="row">All Users</h2>
+<section class="row">
+  <% @users.each do |user| %>
+    <%= render partial: 'user', locals: { user: user } %>
+  <% end %>
+</section>
