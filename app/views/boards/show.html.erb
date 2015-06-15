@@ -1,4 +1,4 @@
-<h2><%= @board.category.titleize %></h2>
+<h2><%= "#{@board.category.titleize}(#{@board.links.count})" %></h2>
 <% @links.each do |link| %>
   <%= render partial: 'links/link', locals: { links: link } %>
 <% end %>
