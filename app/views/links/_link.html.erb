@@ -6,19 +6,21 @@
       </div>
       <div><%= links.post %></div>
         --<%= link_to User.find(links.user_id).username.titleize, user_path(links.user_id) %>
-      <div class="links-votes">
-        <% if Vote.find_by(link_id: links.id) != nil %>
-          <%= Vote.find_by(link_id: links.id).upvote %> Up |
-          <%= Vote.find_by(link_id: links.id).downvote %> Down
-        <% else %>
-          0 Up |
-          0 Down
-        <% end %>
-      </div>
-      <div class="edit-btn">
-        <% if session[:user_id] == links.user_id %>
-          <%= link_to 'EDIT', edit_link_path(links.id) %>
-        <% end %>
+      <div class="sub-link-info">
+        <div class="links-votes">
+          <% if Vote.find_by(link_id: links.id) != nil %>
+            <%= Vote.find_by(link_id: links.id).upvote %> Up |
+            <%= Vote.find_by(link_id: links.id).downvote %> Down
+          <% else %>
+            0 Up |
+            0 Down
+          <% end %>
+        </div>
+        <div class="edit-btn">
+          <% if session[:user_id] == links.user_id %>
+            <%= link_to 'EDIT', edit_link_path(links.id) %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
