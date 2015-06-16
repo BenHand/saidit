@@ -1,6 +1,8 @@
-<%= "(#{boards.links.count})" %>
-<%= link_to boards.category, board_path(boards.id) %>
-<% if session[:user_id] == 41 %>
-  <%= link_to 'x', "/boards/#{boards.id}", method: :delete, class: 'destroy-btn',
-          data: { confirm: "Hit OK to delete this board and all relevant data." } %>
-<% end %>
+<div class="col-md-12">
+  <%= "(#{boards.links.count})" %>
+  <%= link_to boards.category.titleize, board_path(boards.id) %>
+  <% if session[:user_id] == 41 %>
+    <%= link_to 'x', "/boards/#{boards.id}", method: :delete, class: 'destroy-btn',
+            data: { confirm: "Hit OK to delete this board and all relevant data." } %>
+  <% end %>
+</div>

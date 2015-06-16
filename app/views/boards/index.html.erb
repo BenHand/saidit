@@ -1,19 +1,23 @@
-<h1>All Boards</h1>
-<section>
+<h1 class="row">All Boards</h1>
+<section class="container-fluid">
   <div class="board-index">
-    <% @boards.each do |board| %>
-      <div class="boards">
-        <%= render partial: 'board', locals: { boards: board} %>
-      </div>
-    <% end %>
+    <div class="row">
+      <% @boards.each do |board| %>
+        <div class="boards">
+          <%= render partial: 'board', locals: { boards: board} %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </section>
-<section>
+<section class="container-fluid">
   <div class="new-board">
-    <%= form_for new_board_path do |f| %>
-      <%= f.label :category, 'New Category' %>
-      <%= f.text_field :category, placeholder: 'Extreme Programming' %>
-      <%= f.submit 'Create' %>
-    <% end %>
+    <div class="row">
+      <%= form_for new_board_path do |f| %>
+        <%= f.label :category, 'New Category' %>
+        <%= f.text_field :category, placeholder: 'Extreme Programming', class: 'text-field' %>
+        <%= f.submit 'Create', class: 'submit-btn' %>
+      <% end %>
+    </div>
   </div>
 </section>
