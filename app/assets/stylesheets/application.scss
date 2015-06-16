@@ -42,8 +42,14 @@ body{ background: $color-pallet-3; };
 .field{ text-align: center; };
 
 .text-field{
-  border: 3px solid $color-pallet-1;
+  border: 2px solid $color-pallet-1;
   width: 40%;
+  margin-bottom: 20px;
+  &:focus{outline: 3px solid lighten($color-pallet-1, 20%);};
+};
+
+.text-field-signup{ width: 15%;
+  border: 3px solid $color-pallet-1;
   margin-bottom: 20px;
   &:focus{outline: 3px solid lighten($color-pallet-1, 20%);};
 };
@@ -164,12 +170,12 @@ body{ background: $color-pallet-3; };
 };
 
 .comment-box{
-  background: $color-pallet-5;
+  background: $color-pallet-2;
   margin: 10px auto;
   padding: 5px;
   max-width: 55%;
   border-radius: 10px;
-  border: 3px solid $color-pallet-4;
+  border: 3px solid $color-pallet-1;
 };
 
 .links-votes{ text-align: center; };
@@ -183,7 +189,7 @@ body{ background: $color-pallet-3; };
 };
 
 .user-profile{
-  background: $color-pallet-4;
+  background: $color-pallet-1;
   border-radius: 15px 15%;
   margin: 60px auto 20px;
   width: 30%;
@@ -195,7 +201,7 @@ body{ background: $color-pallet-3; };
   padding: 10px 5px 0px;
   background: white;
   border-radius: 15px 15%;
-  border: 2px solid $color-pallet-4;
+  border: 2px solid black;
 };
 
 .user-index-info{ padding: 5px; };

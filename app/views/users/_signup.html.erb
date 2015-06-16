@@ -10,25 +10,35 @@
       </ul>
     </div>
   <% end %>
-<div class="login-box">
-  <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="field col-md-12">
+        <%= f.label :username %><br>
+        <%= f.text_field :username, class: 'text-field-signup' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field col-md-12">
+        <%= f.label :email %><br>
+        <%= f.text_field :email, class: 'text-field-signup'  %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field col-md-12">
+        <%= f.label :password %><br>
+        <%= f.password_field :password, class: 'text-field-signup'  %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field col-md-12">
+        <%= f.label :password_confirmation %><br>
+        <%= f.password_field :password_confirmation, class: 'text-field-signup'  %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="actions col-md-12">
+        <%= f.submit 'Sign-Up', class: 'submit-btn' %>
+      </div>
+    </div>
+  <% end %>
 </div>

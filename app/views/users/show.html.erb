@@ -1,11 +1,11 @@
 <h2 class="row"><%= "#{@users.username.titleize}'s Profile" %></h2>
 <section class="container-fluid">
   <div class="user-profile">
-    <div class="user-profile-contents">
-      <p><%= mail_to @users.email %></p>
-      <p>Total Links: <%= @users.links.count %></p>
-      <p>Votes Cast: <%= @users.votes.count %></p>
-      <p>Comments Made: <%= @users.comments.count %></p>
+    <div class="user-profile-contents row">
+      <p class="col-md-12"><%= mail_to @users.email %></p>
+      <p class="col-md-12">Total Links: <%= @users.links.count %></p>
+      <p class="col-md-12">Votes Cast: <%= @users.votes.count %></p>
+      <p class="col-md-12">Comments Made: <%= @users.comments.count %></p>
     </div>
   </div>
 </section>
