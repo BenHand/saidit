@@ -266,10 +266,17 @@ section.row{
 
 .submit-btn{
   border: 2px solid $color-pallet-1;
-  background: #E8E0CF;
+  background: darken($color-pallet-2, 5%);
   &:hover{
     border-radius: 50px;
     background: $color-pallet-1;
     color: white;
   };
+};
+
+select#link_board{
+  background: lighten($color-pallet-1, 65%);
+  color: $color-pallet-1;
+  text-transform: capitalize;
+  font-weight: bold;
 };

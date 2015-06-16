@@ -1,20 +1,30 @@
-<h2>Create a new link, <%= @current_user.username.titleize %></h2>
-<div class="link-area">
-  <%= form_for @links do |f| %>
-    <div class="field">
-      <%= f.label :title %>
-      <%= f.text_field :title, placeholder: 'Whats up?', class: 'field-area'  %>
+<h2 class="row">Create a new link, <%= current_user.username.titleize %></h2>
+<div class="container-fluid">
+  <div class="link-area">
+    <div class="row">
+      <%= form_for @links do |f| %>
+      <div class="field col-md-12">
+        <%= f.label :title %>
+        <%= f.text_field :title, placeholder: 'Whats up?', class: 'text-field'  %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.text_area :post, cols: 80, rows: 6,
-           placeholder: 'Please explain further', class: 'field-area' %>
+    <div class="row">
+      <div class="field col-md-12">
+        <%= f.text_area :post, cols: 80, rows: 6,
+             placeholder: 'Please explain further', class: 'text-area' %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :category %>
-      <%= f.select :board, @all_boards %>
+    <div class="row">
+      <div class="field col-md-12">
+        <%= f.label :category %>
+        <%= f.select :board, @all_boards, class: 'cat-drop' %>
+      </div>
     </div>
-    <div class="actions">
-      <%= f.submit 'POST' %>
+    <div class="row">
+      <div class="actions">
+        <%= f.submit 'POST', class: 'submit-btn' %>
+      </div>
     </div>
-  <% end %>
-</section>
+    <% end %>
+  </div>
+</div>
