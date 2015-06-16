@@ -18,7 +18,8 @@
         </div>
         <div class="edit-btn">
           <% if session[:user_id] == links.user_id %>
-            <%= link_to 'EDIT', edit_link_path(links.id) %>
+            <%= link_to 'EDIT', edit_link_path(links.id) %> |
+            <%= link_to 'DELETE', delete_link_path(links.id), method: :delete %>
           <% end %>
         </div>
       </div>

@@ -15,7 +15,8 @@
     <div class="row">
       <%= form_for new_board_path do |f| %>
         <%= f.label :category, 'New Category' %>
-        <%= f.text_field :category, placeholder: 'Extreme Programming', class: 'text-field' %>
+        <%= f.text_field :category, placeholder: '9 char max',
+            maxlength: 9, class: 'text-field' %>
         <%= f.submit 'Create', class: 'submit-btn' %>
       <% end %>
     </div>

@@ -5,6 +5,7 @@ class LinksController < ApplicationController
     @links = links.sort_by { |l| l.votes.sort_by { |v| v.upvote } }.reverse
   end
 
+  # TODO: remove logic from link partial
   def show
     @links = Link.find(params[:id])
     @comments = Comment.all.where(link_id: params[:id])
@@ -25,7 +26,6 @@ class LinksController < ApplicationController
     redirect_to link_path(@links), notice: 'Post Created'
   end
 
-# TODO: be able to edit links
   def edit
     @link = Link.find(params[:id])
   end
@@ -40,6 +40,8 @@ class LinksController < ApplicationController
 
 # TODO: be able to delete links
   def destroy
+    Link.find(params[:id]).destroy
+    redirect_to links_path
   end
 
 private
