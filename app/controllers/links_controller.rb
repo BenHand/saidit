@@ -38,7 +38,6 @@ class LinksController < ApplicationController
     redirect_to link_path(link.id)
   end
 
-# TODO: be able to delete links
   def destroy
     Link.find(params[:id]).destroy
     redirect_to links_path

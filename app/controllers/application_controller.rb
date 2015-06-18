@@ -17,7 +17,7 @@ helper_method :current_user
 
   def authenticate_user!
     if current_user == nil
-      redirect_to login_path, alert: "You must be logged in."
+      redirect_to login_path, alert: 'You must be logged in.'
     end
   end
 

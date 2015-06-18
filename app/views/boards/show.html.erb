@@ -1,5 +1,10 @@
 <h2><%= "#{@board.category.titleize}(#{@board.links.count})" %></h2>
+<p class="board-new">Most Recent Link</p>
 <% @links.each do |link| %>
   <%= render partial: 'links/link', locals: { links: link } %>
 <% end %>
-<%= button_to 'Create New Link', '/links/new', method: :get %>
+<div class="row">
+  <div>
+  <%= button_to 'Create New Link', '/links/new', method: :get, class: 'submit-btn' %>
+  </div>
+</div>

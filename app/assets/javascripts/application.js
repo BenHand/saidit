@@ -16,3 +16,11 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+$(document).ready(function() {
+    var firstLink = $('.link-show').first();
+    $('.board-new').hover(
+        function() { firstLink.addClass('highlight'); },
+        function() { firstLink.removeClass('highlight'); }
+    );
+});
+

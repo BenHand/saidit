@@ -302,3 +302,15 @@ select#link_board{
   border: 2px solid $color-pallet-1;
   margin: 0 auto;
 };
+
+.board-new{
+  margin: 0 auto;
+  width: 140px;
+  font-size: 16px;
+  color: $color-pallet-1;
+  text-decoration: underline;
+};
+
+.highlight{
+  background: lighten($color-pallet-1, 50%);
+};
