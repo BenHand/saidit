@@ -199,7 +199,7 @@ body{ background: $color-pallet-3; };
 
 .user-profile-contents{
   margin: 10px;
-  padding: 10px 5px 0px;
+  padding: 10px 5px 0;
   background: white;
   border-radius: 15px 15%;
   border: 2px solid black;
@@ -264,8 +264,8 @@ body{ background: $color-pallet-3; };
 };
 
 section.row{
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 };
 
 .email{
@@ -274,7 +274,7 @@ section.row{
 
 .user-cmt{
   float: right;
-  margin-right: 0px;
+  margin-right: 0;
 };
 
 .submit-btn{
@@ -313,4 +313,8 @@ select#link_board{
 
 .highlight{
   background: lighten($color-pallet-1, 50%);
+};
+
+.center-box{
+  text-align: center;
 };
