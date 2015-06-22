@@ -1,7 +1,7 @@
 # Saidit - A Reddit Clone
   * Functioning reddit clone. You can sign up, log in,
      create links and comments and vote.
-
+  * Check out the live site <a href="http://saiditt.herokuapp.com/">here</a>.
 * Ruby version 2.2.0
 
 ## Do the following to use this program
