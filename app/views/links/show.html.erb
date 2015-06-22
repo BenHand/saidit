@@ -1,13 +1,13 @@
 <h3><%= @links.title.titleize %></h3>
 <section>
   <div class="upvote-box"> UP
-    <%= button_to @votes[0].upvote, upvote_path(link_id: @links.id) %>
+    <%= button_to @votes[0].upvote, upvote_path(link_id: @links.id), class: 'submit-btn' %>
   </div>
   <div>
     <%= render partial: 'link', locals: { links: @links } %>
   </div>
   <div class="downvote-box"> DOWN
-    <%= button_to @votes[0].downvote, downvote_path(link_id: @links.id) %>
+    <%= button_to @votes[0].downvote, downvote_path(link_id: @links.id), class: 'submit-btn' %>
   </div>
   </section>
 <section>
@@ -26,7 +26,7 @@
         <%= f.hidden_field :link_id, value: @links.id %>
       </div>
       <div class="actions">
-        <%= f.submit 'Comment' %>
+        <%= f.submit 'Comment', class: 'submit-btn' %>
       </div>
     <% end %>
   </div>
